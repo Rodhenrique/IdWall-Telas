@@ -13,7 +13,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top" id="nav">
+    <!-- Nav section -->
+    <nav class="navbar navbar-expand fixed-top" id="nav">
         <div class="container">
             <a href="#" class="navbar-brand">
                 <img src="images/idwall-logo.svg" alt="IdWall">
@@ -21,16 +22,71 @@
             <ul class="navbar-nav">
                 <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="#">Relatórios</a></li>
                 <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="#">Monitor</a></li>
-                <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="#">Usuários</a></li>
+                <li class="nav-item mx-1 p-2 nav-selected"><a class="nav-link p-3" href="#">Usuários</a></li>
             </ul>
 
-            <button class="new-report-btn btn d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#newReport">
+            <button class="btn d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#newReport">
                 <img src="images/documents-icon.svg" alt="">
                 <div class="ms-5">Novo Relatório</div>
             </button>
         </div>
     </nav>
+
+    <section class="main">
+        <!-- Table Search Section --> 
+        <div class="container d-flex justify-content-center">
+            <div class="search-filter d-flex align-items-center">
+                <select class="form-select p-3" id="users-search-filter">
+                    <option value="id">Buscar por ID</option>
+                    <option value="email">Buscar por email</option>
+                    <option value="nome">Buscar por cliente</option>
+                </select>
+            </div>
+            <div class="search-input">
+                <input class="p-3" type="text" class="form-control" id="users-search" placeholder="ID do usuário">
+            </div>
+        </div>
+
+        <!-- Table Header Seaction -->
+        <div class="mt-5 py-3">
+            <div class="container">
+                <div class="table-header d-flex align-items-center text-center">
+                    <a class="btn d-flex align-items-center justify-content-center" href="#">
+                        Adicionar usuário
+                    </a>
+                    <h3>Todos os usuários</h3>
+                    <div class="table-options d-flex align-items-center">
+                        <div class="table-sort d-flex align-items-center">
+                            <img class="p-2" src="images/sort-icon.svg" alt="">
+                            <select class="form-select table-option">
+                                <option selected>Ordenar</option>
+                                <option value="1">A-Z</option>
+                                <option value="2">Por ID</option>
+                                <option value="3">Protocolos</option>
+                            </select>
+                        </div>
+                        <div class="table-filter d-flex align-items-center">
+                            <img class="p-2" src="images/filter-icon.svg" alt="">
+                            <select class="form-select table-option">
+                                <option selected>Filtrar</option>
+                                <option value="1">Todos</option>
+                                <option value="2">Desativados</option>
+                                <option value="3">Com Acesso</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---->
     
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

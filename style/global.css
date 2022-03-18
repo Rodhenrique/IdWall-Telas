@@ -3,34 +3,43 @@
 :root {
     --primary-color: #5500FF;
     --purple: #4100CF;
-    --white: #FFFFFF;
     --grey: #595959;
+    --light-grey: #bfbfbf;
+    --lighter-grey: #e8e8e8;
     --red: #CF1322;
+    --main-background: #fafafa;
 }
 
 * {
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    background-color: var(--main-background);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* BUTTONS */
+
 .btn {
+    background-color: var(--primary-color);
+    color: white;
     border-radius: 10px;
+    width: 270px;
+    height: 48px;
 }
 
 .btn:hover {
-    color: var(--white);
+    color: white;
     background-color: var(--purple);
 }
 
 .btn img {
     width: 30px;
     height: 30px;
-}
-
-.new-report-btn {
-    background-color: var(--primary-color);
-    color: var(--white);
-    width: 270px;
-    height: 48px;
 }
 
 /* NAV */
@@ -44,15 +53,15 @@
     width: 100px;
 }
 
-.nav-item:hover {
-    box-shadow: 0 1.2px var(--purple);
-}
-
 .nav-item a {
     color: var(--grey);
 }
 
 .nav-item a:hover {
     color: var(--primary-color);
-    transition: 0.5s;
+}
+
+.nav-selected {
+    font-weight: 700;
+    box-shadow: 0 1.2px var(--purple);
 }
