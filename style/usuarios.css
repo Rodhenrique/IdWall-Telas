@@ -1,6 +1,9 @@
+
 .main {
     padding-top: 8rem;
 }
+
+/* Seach */
 
 .search-filter {
     width: 225px;
@@ -8,15 +11,16 @@
     border-radius: 10px 0 0 10px;
 }
 
-.search-filter .form-select {
+.form-select{
     background-color: transparent;
+    box-shadow: none!important;
     border: none;
     color: white;
     font-weight: 600;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 }
 
-.search-filter .form-select option {
+.form-select option {
     color: black;
 }
 
@@ -25,7 +29,7 @@ input[type="text"] {
     border: solid 1px var(--light-grey);
 }
 
-/* Table */
+/* Table Header */
 
 .table-header {
     justify-content: space-between;
@@ -37,9 +41,33 @@ input[type="text"] {
 }
 
 .table-option {
-    border: none;
-    background-image: none;
-    width: 100px;
+    border: none!important;
+    background-image: none!important;
+    width: 80px;
     padding: 0;
-    box-shadow: none!important;
+}
+
+.table-option::after {
+    border: none;
+}
+
+/* Table */
+
+.users-table {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-background)!important;
+}
+
+.table-col {
+    background-color: var(--lighter-grey);
+}
+
+.table-col:hover {
+    background-color: var(--lighter-purple);
 }

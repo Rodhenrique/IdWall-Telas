@@ -1,3 +1,10 @@
+// Nice select
+$(document).ready(function () {
+    $('#users-table-sort').niceSelect();
+    $('#users-table-filter').niceSelect();
+});
+
+// Alterar filtro de busca
 $('#users-search-filter').change(function() {
     if ($(this).val() === 'email') {
         $('#users-search').attr('placeholder', 'Email do usuário');
@@ -7,4 +14,6 @@ $('#users-search-filter').change(function() {
         $('#users-search').attr('placeholder', 'ID do usuário');
     }
 });
+
+
             
