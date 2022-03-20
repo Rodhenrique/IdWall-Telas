@@ -31,18 +31,18 @@ h1, h2, h3 {
     border-radius: 10px;
 }
 
-.btn:hover {
-    color: white;
-    background-color: var(--purple);
-}
-
 .btn img {
     width: 30px;
     height: 30px;
 }
 
+.btn:hover {
+    color: white;
+    background-color: var(--purple);
+}
+
 .btn-large {
-    width: 270px;
+    width: 250px;
     height: 48px;
 }
 
@@ -75,4 +75,9 @@ h1, h2, h3 {
 .nav-item.selected {
     font-weight: 700;
     box-shadow: 0 1.2px var(--purple);
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
 }
