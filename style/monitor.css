@@ -1,0 +1,88 @@
+/* Title monitor */
+#title h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+}
+/* Links Monitor */
+#menu_links div {
+    border-bottom: 2px solid rgba(89, 89, 89, 0.25);
+}
+#menu_links div a {
+    color: rgba(89, 89, 89, 0.60);
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 3.75rem;
+}
+#menu_links div a:hover {
+    color: var(--purple);
+}
+#menu_links div.selected_aba {
+    border-bottom: 2px solid var(--purple);
+}
+#menu_links div.selected_aba a {
+    color: var(--purple);
+    font-size: 25px;
+}
+/* TABLE */
+.monitor_table {
+    max-height: 400px;
+    height: auto;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.monitor_table table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+/* THEAD */
+.monitor_table thead th {
+    font-size: 25px;
+    color: #000;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+.monitor_table thead th:first-child, th:nth-child(2) {
+    border-right: 2px solid rgba(0, 0, 0, 0.25);
+}
+.monitor_table thead th.two_columns {
+    border-right: 0;
+}
+.monitor_table th {
+    width: 33.33%;
+    position: sticky;
+    top: 0;
+    background-color: var(--main-background)!important;
+}
+/* TBODY */
+.monitor_table tbody tr:hover {
+    background-color: rgba(111, 66, 193, 0.13);
+}
+.monitor_table tbody tr td {
+    line-height: 2rem!important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    font-size: 17px;
+    color:rgba(0, 0, 0, 0.80);
+}
+.monitor_table tbody tr td:nth-child(2) {
+    text-decoration: underline;
+    color: #597EF7;
+}
+.monitor_table tbody tr:last-child td {
+    border-bottom: 0;
+}
+/* STATUS */
+.status_icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: red;
+}
+.status_icon_green {
+    background-color: green;
+}
+/* SPINNER CARREGANDO COLOR */
+.spinner_color {
+    background-color: #597EF7;
+    color: white;
+}
