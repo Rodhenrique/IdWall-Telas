@@ -1,3 +1,82 @@
+
+.main {
+    padding-top: 8rem;
+}
+
+/* Seach */
+
+.search-filter {
+    width: 255px;
+    background-color: var(--primary-color);
+    border-radius: 10px 0 0 10px;
+}
+
+.search-options {
+    border: none!important;
+    background-color: transparent!important;
+    font-size: 16px;
+    color: white;
+    width: 200px;
+    padding: 0;
+}
+
+.search-options .option {
+    color: black!important;
+}
+
+.search-options::after {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+input[type="text"] {
+    border-radius: 0px 10px 10px 0px;
+    border: solid 1px var(--light-grey);
+}
+
+/* Table Header */
+
+.table-header {
+    justify-content: space-between;
+}
+
+.table-header h3{
+    color: var(--grey);
+    font-weight: 600;
+}
+
+.table-option {
+    border: none!important;
+    background-image: none!important;
+    width: 80px;
+    padding: 0;
+}
+
+.table-option::after {
+    border: none;
+}
+
+/* Table */
+
+.users-table {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-background)!important;
+}
+
+.table-col {
+    background-color: var(--lighter-grey);
+}
+
+.table-col:hover {
+    background-color: var(--lighter-purple);
+}
+
 /* Title monitor */
 #title h1 {
     font-size: 40px;
