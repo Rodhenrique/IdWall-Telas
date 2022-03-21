@@ -1,77 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-:root {
-    --primary-color: #5500FF;
-    --purple: #4100CF;
-    --grey: #595959;
-    --light-grey: #bfbfbf;
-    --lighter-grey: #e8e8e8;
-    --red: #CF1322;
-    --main-background: #fafafa;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--main-background);
-}
-
-.relatorio_section{
-    margin: 5em;
-    padding-top: 5rem;
-}
-
-.filtro-relatorio{
-    margin-top: 3em;
+.relatorio_section {
+    padding-top: 8rem;
 }
 
 .filtro-select {
-    width: 100%;
-    padding: 16px;
-    margin:4px;
-    padding-left: 40px;
-    width: 330px;
-    height: 50px;
+    line-height: 48px;
+    font-size: 16px;
+    width: 250px;
+    height: 48px;
     background: #FFFFFF;
     border: 1px solid #C1C2C1;
-    box-sizing: border-box;
     border-radius: 5px;
-    color: #C1C2C1;
+    color: var(--grey);
 }
 
 .Icon-inside {
-    position:relative;
+    justify-content: left;
+    margin-top: 28px;
+}
+
+.Icon-inside h6 {
+    font-size: 14px;
+    text-align: center;
 }
 
 .Icon-inside span {
-    position:absolute;
-    left:0;
-    top:10px;
-    padding:10px 10px;
+    z-index: 1;
+    position: relative;
+    left: 36px;
     color:#8C8C8C;
 }
 
-.Icon-outside {
-    position:relative;
+.search-options::after {
+    right: 20px;
 }
 
-.Icon-outside span {
-    position:absolute;
-    margin-left:-6px;
-    top:4px;
-    padding: 14px 15px;
-    color:#30A3F1;
-    background:black;
-}
-
-.cards-relatorio{
-    margin: 3em 1em;
+.cards-relatorio {
     border: 1px solid rgba(85, 85, 85, 0.5);
 }
 
-.card-head{
+.card-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,109 +49,180 @@ body {
     border-bottom: 1px solid rgba(85, 85, 85, 0.5);
 }
 
-.container-card-head{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-card-head h4 {
+    font-size: 18px;
 }
 
-.container-card-head h6{
-    margin: 0 1em 0 0;
-}
-
-.btn-relatorio{
+.btn-relatorio {
     background-color: transparent;
     border: 1px solid #8C8C8C;
     color: #8C8C8C;
-    text-align: center;
     font-size: 10px;
     border-radius: 10px;
-    padding: 1px 15px;
     cursor: pointer;
 }
 
-.btn-relatorio p{
-    margin: 0;
+.btn-relatorio p {
     font-size: 16px;
     font-weight: 400;
 }
 
-.btn-relatorio:hover{
-    background-color:#8C8C8C ;
+.btn-relatorio:hover {
+    background-color: var(--primary-color);
     color: #FFFFFF;
 }
 
-.card-content{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
-}
-
-.card{
-    margin: 1.2em 0.5em 0.5em 0.5em;
+.card {
     background: #FAFAFA;
     border-radius: 12px;
-    width: 100%;
+    margin-bottom: 15px;
 }
 
-.card-body{
-    text-align: center;    
-}
-
-.card-processando{
-    box-shadow: inset 0px 4px 4px #2488D1;
-}
-
-.card-revisao{
-    border-top: 3px solid #FBBB02;
-}
-
-.card-ok{
-    box-shadow: inset 0px 4px 4px #1EB940;
-}
-
-.card-title{
-    font-size: 3vw;
-}
-
-.card-text{
-    font-size: 1vw;
-}
-
-.table-relatorio{
-    margin: 3em 1em;
-}
-
-.table-relatorio table{
-    width: 100%;
-    background-color: #FFFFFF;
-    border-radius: 15px;
-    padding: 10px;
-    padding-bottom: 20px;
-    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.table-relatorio th{
-    padding: 10px;
-}
-
-.table-relatorio td{
-    padding: 5px 10px;
-}
-
-.btn-tabela{
-    background-color: #FAAD14;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 15px;
+.card:hover {
     cursor: pointer;
-    outline: 0;
-    border: none;
 }
 
-.btn-tabela:hover{
-    background-color: #FFFFFF;
-    color: #FAAD14;
+.card-body {
+    text-align: center; 
+}
+
+.card-processando {
+    border-top: 3px solid var(--blue);
+}
+
+.card-processando:hover {
+    border-top: 5px solid var(--light-blue);
+    border-left: 2.5px solid var(--light-blue);
+    border-right: 2.5px solid var(--light-blue);
+    transition: 0.2s;
+}
+
+.card-revisao {
+    border-top: 3px solid var(--yellow);
+}
+
+.card-revisao:hover {
+    border-top: 5px solid var(--light-yellow);
+    border-left: 2.5px solid var(--light-yellow);
+    border-right: 2.5px solid var(--light-yellow);
+    transition: 0.2s;
+}
+
+.card-ok {
+    border-top: 3px solid #1EB940;
+}
+
+.card-ok:hover {
+    border-top: 5px solid var(--light-green);
+    border-left: 2.5px solid var(--light-green);
+    border-right: 2.5px solid var(--light-green);
+    transition: 0.2s;
+}
+
+.card-title {
+    font-size: 10vw;
+    color: var(--grey);
+}
+
+.card-text {
+    font-size: 3vw;
+    color: var(--grey);
+}
+
+
+.table-relatorio {
+    overflow-y: scroll;
+    height: 300px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-background)!important;
+}
+
+.btn-red {
+    background-color: var(--red);
+}
+
+.btn-red:hover {
+    background-color: var(--dark-red);
+}
+
+.btn-yellow {
+    background-color: var(--yellow);
+}
+
+.btn-yellow:hover{
+    background-color: var(--dark-yellow);
+}
+
+.btn-green {
+    background-color: var(--green);
+}
+
+.btn-green:hover {
+    background-color: var(--dark-green);
+}
+
+.d-none {
+    display: none;
+}
+
+.container-card-head h6 {
+    display: none;
+}
+
+@media screen and (min-width: 768px){ 
+    .search-options::after {
+        right: 0;
+    }
+
+    .Icon-inside {
+        justify-content: right;
+        margin: 0;
+    }
+
+    .Icon-inside h6 {
+        display: none;
+    }
+
+    .container-card-head h4 {
+        font-size: 24px;
+    }
+
+    .container-card-head h6 {
+        display: block;
+    }
+
+    .card-processando:hover {
+        border-top: 5px solid var(--light-blue);
+        border-left: 5px solid var(--light-blue);
+        transition: 0.2s;
+    }
+     
+    .card-revisao:hover {
+        border-top: 5px solid var(--light-yellow);
+        border-left: 2.5px solid var(--light-yellow);
+        border-right: 2.5px solid var(--light-yellow);
+        transition: 0.2s;
+    }
+    
+    .card-ok:hover {
+        border-top: 5px solid var(--light-green);
+        border-right: 5px solid var(--light-green);
+        transition: 0.2s;
+    }
+
+    .card-title{
+        font-size: 3vw;
+    }
+    
+    .card-text{
+        font-size: 1vw;
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
 }

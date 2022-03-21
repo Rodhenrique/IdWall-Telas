@@ -7,7 +7,16 @@
     --grey: #595959;
     --light-grey: #BFBFBF;
     --lighter-grey: #E8E8E8;
-    --red: #CF1322;
+    --dark-red: #CF1322;
+    --red: #F5222D;
+    --dark-yellow: #D48806;
+    --yellow: #FAAD14;
+    --light-yellow: #FFD666;
+    --dark-green: #389E0D;
+    --green: #52C41A;
+    --light-green:  #95DE64;
+    --blue: #2F54EB;
+    --light-blue: #85A5FF;
     --main-background: #FAFAFA;
 }
 
@@ -19,37 +28,56 @@ body {
     background-color: var(--main-background);
 }
 
-h1, h2, h3 {
+p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
+}
+
+a {
+    text-decoration: none!important;
 }
 
 /* Buttons */
 
 .btn {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color)!important;
     color: white;
     border-radius: 10px;
 }
 
 .btn img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .btn:hover {
     color: white;
-    background-color: var(--purple);
+    background-color: var(--purple)!important;
 }
 
 .btn-large {
-    width: 250px;
-    height: 48px;
+    width: 200px;
+    height: 40px;
 }
 
-.btn-small {
+.btn-medium {
     font-size: 12px;
     height: 28px;
     box-shadow: none!important;
+}
+
+.btn-small {
+    color: white;
+    border: none;
+    font-size: 12px;
+    width: 80px;
+    height: 28px;
+    box-shadow: none!important;
+    border-radius: 10px;
+}
+
+.btn-primary img {
+    width: 25px;
+    height: 25px;
 }
 
 /* Nav */
@@ -58,10 +86,6 @@ h1, h2, h3 {
     background-color: var(--main-background);
     box-shadow: 0 1.2px rgba(0, 0, 0, 0.2);
     padding-bottom: 0;
-}
-
-.navbar-nav {
-    margin-left: 8rem;
 }
 
 .navbar-brand img {
@@ -78,10 +102,70 @@ h1, h2, h3 {
 
 .nav-item.selected {
     font-weight: 700;
-    box-shadow: 0 1.2px var(--purple);
 }
+
+.navbar-toggler {
+    box-shadow: none!important;
+}
+
+
+/* Modal */
 
 .modal-header {
     background-color: var(--primary-color);
     color: white;
+}
+
+.report-type {
+    width: 410px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 16px;
+    border: 1px solid #ced4da
+}
+
+@media screen and (min-width: 960px){
+    .btn-large {
+        width: 250px;
+        height: 48px;
+    }
+    
+    .btn-medium {
+        font-size: 12px;
+        height: 28px;
+        box-shadow: none!important;
+    }
+    
+    .btn-small {
+        color: white;
+        border: none;
+        font-size: 12px;
+        width: 80px;
+        height: 28px;
+        box-shadow: none!important;
+        border-radius: 10px;
+    }
+
+    .btn img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .new-report-btn {
+        position: relative;
+        left: 68%;
+    }
+
+    .report-type {
+        width: 360px;
+        height: 58px;
+        line-height: 58px;
+        font-size: 16px;
+        border: 1px solid #ced4da
+    }
+
+    .nav-item.selected {
+        font-weight: 700;
+        box-shadow: 0 1.2px var(--purple);
+    }
 }

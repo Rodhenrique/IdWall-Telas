@@ -12,6 +12,6 @@ O Enterprise Connection é uma maneira, adotada pela FIAP, de avaliar os conheci
 
 ## Icones Utilizados
 
-[material-io](https://material.io/resources/icons/)
+[material-io](https://fonts.google.com/icons?selected=Material+Icons)
 [freeicons](https://freeicons.io/)
 

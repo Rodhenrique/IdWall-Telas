@@ -34,6 +34,40 @@ $('#pipline-search-filter').change(function() {
     }
 });
 
+// Alterar abas pipline 
+
+$('#card-process').click(function() {
+    $('#pipline-table-process').toggleClass('d-none')
+    if (!$('#pipline-table-review').hasClass('d-none')) {
+        $('#pipline-table-review').toggleClass('d-none')
+    }
+    if (!$('#pipline-table-ok').hasClass('d-none')) {
+        $('#pipline-table-ok').toggleClass('d-none')
+    }
+});
+
+$('#card-review').click(function() {
+    $('#pipline-table-review').toggleClass('d-none')
+    if (!$('#pipline-table-process').hasClass('d-none')) {
+        $('#pipline-table-process').toggleClass('d-none')
+    }
+    if (!$('#pipline-table-ok').hasClass('d-none')) {
+        $('#pipline-table-ok').toggleClass('d-none')
+    }
+});
+
+$('#card-ok').click(function() {
+    $('#pipline-table-ok').toggleClass('d-none')
+    if (!$('#pipline-table-review').hasClass('d-none')) {
+        $('#pipline-table-review').toggleClass('d-none')
+    }
+    if (!$('#pipline-table-process').hasClass('d-none')) {
+        $('#pipline-table-process').toggleClass('d-none')
+    }
+});
+
+
+// Alterar abas monitor
 var abas = function()
 {
     document.getElementById(document.getElementsByClassName('selected_aba')[0].getAttribute('name')).style.display = 'none';

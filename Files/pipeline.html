@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="../content/images/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../content/scripts/nice-select-1.1.0/css/nice-select.css">
     <link rel="stylesheet" href="../content/css/global.css">
     <link rel="stylesheet" href="../content/css/pipeline.css">
@@ -15,44 +17,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Id Wall - Pipeline</title>
 </head>
-    <body>
-        
-        <nav class="navbar navbar-expand fixed-top" id="nav">
-            <div class="container">
-                <a href="#" class="navbar-brand">
-                    <img src="../content/images/idwall-logo.svg" alt="IdWall">
-                </a>
-                <ul class="navbar-nav">
-                    <li class="nav-item mx-1 p-2 selected"><a class="nav-link p-3" href="../Files/pipeline.html">Relatórios</a></li>
-                    <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="../Files/monitor.html">Monitor</a></li>
-                    <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="../Files/usuarios.html">Usuários</a></li>
-                </ul>
-                
-                <button class="btn btn-large d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#newReport">
-                    <img src="../content/images/documents-icon.svg" alt="">
-                    <div class="ms-5">Novo Relatório</div>
-                </button>
-            </div>
-        </nav>
-        
-        <section class="relatorio_section">
-            <div class="container">
-                <h3>Visão geral de relatórios</h3>
 
-                <div class="filtro-relatorio d-flex justify-content-between align-items-center">
-                    <div class="Icon-inside">
-                        <select class="filtro-select input-group">
-                            <option value="" selected="" disabled>Filtrar por data</option>   
-                            <option value="">Hoje</option>                             
-                            <option value="">Ontem</option>
-                            <option value="">Últimos sete dias</option>
-                            <option value="">Último mês</option>
-                        </select> 
-                        <span class="material-icons fa-lg fa-fw">calendar_today</span>    
-                    </div>
-                
-                    <div class="search">
-                        <div class="container d-flex justify-content-center">
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="nav">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="../content/images/idwall-logo.svg" alt="IdWall">
+            </a>
+
+            <button class="new-report-btn btn btn-large d-flex align-items-center" data-bs-toggle="modal"
+                data-bs-target="#newReport">
+                <img src="../content/images/documents-icon.svg" alt="">
+                <div class="ms-4 ms-lg-5">Novo Relatório</div>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span><img src="../content/images/menu-toggler.svg" alt=""></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-1 p-2 selected"><a class="nav-link p-3"
+                            href="../Files/pipeline.html">Relatórios</a></li>
+                    <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="../Files/monitor.html">Monitor</a></li>
+                    <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="../Files/usuarios.html">Usuários</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relatorio_section">
+        <div class="container">
+            <h3>Visão geral de relatórios</h3>
+            <div class="filtro-relatorio mt-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="d-flex">
                             <div class="search-filter d-flex align-items-center">
                                 <select class="filter search-options px-4" id="pipline-search-filter">
                                     <option value="id">Buscar por ID</option>
@@ -61,108 +63,296 @@
                                 </select>
                             </div>
                             <div class="search-input">
-                                <input class="p-2" type="text" class="form-control" id="pipline-search" placeholder="ID do relatório">
+                                <input class="p-3" type="text" class="form-control" id="pipline-search"
+                                    placeholder="ID do relatório">
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="cards-relatorio">
-                    <div class="card-head">
-                        <div class="container-card-head">
-                            <h6>Relátorio</h6>
-                        </div>
-                        <div class="container-card-head">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="Icon-inside d-flex align-items-center">
+                            <span class="material-icons fa-lg fa-fw">calendar_today</span>
+                            <select class="filter filtro-select form-group align-items-center">
+                                <option value="" selected disabled>Filtrar por data</option>
+                                <option value="">Hoje</option>
+                                <option value="">Ontem</option>
+                                <option value="">Últimos sete dias</option>
+                                <option value="">Último mês</option>
+                            </select>
                             <div>
-                                <h6>Última checagem: há 15 minutos</h6>
-                            </div>
-                            <button type="button" class="btn-relatorio">
-                                <div class="d-flex align-items-center">
-                                    <span class="material-icons">description</span> 
-                                    <p>
-                                        Novo relatório
-                                    </p> 
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <div class="card card-processando">
-                            <div class="card-body">
-                                <p class="card-title">1</p>
-                                <p class="card-text">PROCESSANDO</p>
-                            </div>
-                        </div>
-
-                        <div class="card card-revisao">
-                            <div class="card-body">
-                                <p class="card-title">4</p>
-                                <p class="card-text">DEVEM SER REVISADOS</p>
-                            </div>
-                        </div>
-
-                        <div class="card card-ok">
-                            <div class="card-body">
-                                <p class="card-title">6</p>
-                                <p class="card-text">TUDO OK</p>
+                                <h6 class="mx-3">Última checagem: há 15 minutos</h6>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="table-relatorio">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col">ID do relatório</th>
-                                <th scope="col">Última atualização</th>
-                                <th scope="col">CPF/CNPJ</th>
-                                <th scope="col">Nome/Razão Social</th>
-                                <th scope="col">Ação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="row">2546</td>
-                                <td>12/02/2022</td>
-                                <td>000.000.000-00</td>
-                                <td>Desconhecido</td>
-                                <td><button type="button" class="btn-tabela">Revisar</button></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">2546</td>
-                                <td>12/02/2022</td>
-                                <td>000.000.000-00</td>
-                                <td>Desconhecido</td>
-                                <td><button type="button" class="btn-tabela">Revisar</button></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">2546</td>
-                                <td>12/02/2022</td>
-                                <td>000.000.000-00</td>
-                                <td>Desconhecido</td>
-                                <td><button type="button" class="btn-tabela">Revisar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>        
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="container d-flex flex-column align-items-center justify-content-between p-4 mt-4 developers">
-            <p class="text-center m-0">© 2022 IdWall - Todos os direitos reservados.</p>
-            <div class="d-flex align-items-center">
-                <span class="px-2">Feito por:</span>
-                <div class="">
-                    <a href="https://github.com/Rodhenrique/IdWall-Telas/" target="_blank">Erick</a>
-                    <a href="https://github.com/Rodhenrique/IdWall-Telas/" target="_blank">Lucas</a>
-                    <a href="https://github.com/Rodhenrique/IdWall-Telas/" target="_blank">Josué</a>
-                    <a href="https://github.com/Rodhenrique/IdWall-Telas/" target="_blank">Henrique</a>
                 </div>
             </div>
-        </footer>
+
+            <div class="cards-relatorio mt-3 mt-lg-5">
+                <div class="card-head py-3">
+                    <div class="container-card-head align-items-center">
+                        <h4>Relátorio</h4>
+                    </div>
+                    <div class="container-card-head d-flex align-items-center">
+                        <div>
+                            <h6 class="mx-3">Última checagem: há 15 minutos</h6>
+                        </div>
+                        <button type="button" class="btn-relatorio btn-medium d-flex align-items-center p-3">
+                            <span class="material-icons px-2">description</span>
+                            <p>
+                                Novo relatório
+                            </p>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content p-2">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <a class="card card-processando p-md-4" id="card-process" href="#pipline-table-process">
+                                <div class="card-body">
+                                    <p class="card-title">12</p>
+                                    <p class="card-text">PROCESSANDO</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <a class="card card-revisao p-md-4" id="card-review" href="#pipline-table-review">
+                                <div class="card-body">
+                                    <p class="card-title">4</p>
+                                    <p class="card-text">DEVEM SER REVISADOS</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <a class="card card-ok p-md-4" id="card-ok" href="#pipline-table-ok">
+                                <div class="card-body">
+                                    <p class="card-title">6</p>
+                                    <p class="card-text">TUDO OK</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela processos -->
+            <div id="pipline-table-process" class="container table-relatorio mt-5 d-none">
+                <table class="table table-hover table-responsive text-center m-0">
+                    <thead>
+                        <tr>
+                            <th>ID do relatório</th>
+                            <th>Última atualização</th>
+                            <th>CPF/CNPJ</th>
+                            <th>Nome/Razão Social</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-red btn-small">Cancelar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabela Revisão -->
+            <div id="pipline-table-review" class="container table-relatorio mt-5 d-none">
+                <table class="table table-hover table-responsive text-center m-0">
+                    <thead>
+                        <tr>
+                            <th>ID do relatório</th>
+                            <th>Última atualização</th>
+                            <th>CPF/CNPJ</th>
+                            <th>Nome/Razão Social</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-yellow btn-small">Revisar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-yellow btn-small">Revisar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-yellow btn-small">Revisar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-yellow btn-small">Revisar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabela Tudo OK-->
+            <div id="pipline-table-ok" class="container table-relatorio mt-5 d-none">
+                <table class="table table-hover table-responsive text-center m-0">
+                    <thead>
+                        <tr>
+                            <th>ID do relatório</th>
+                            <th>Última atualização</th>
+                            <th>CPF/CNPJ</th>
+                            <th>Nome/Razão Social</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-green btn-small">Resultado</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-green btn-small">Resultado</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-green btn-small">Resultado</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-green btn-small">Resultado</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-green btn-small">Resultado</button></td>
+                        </tr>
+                        <tr>
+                            <td>2546</td>
+                            <td>12/02/2022</td>
+                            <td>000.000.000-00</td>
+                            <td>Desconhecido</td>
+                            <td><button type="button" class="btn-green btn-small">Resultado</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="container d-flex flex-column align-items-center justify-content-between p-4 mt-4 developers">
+        <p class="text-center m-0">© 2022 IdWall - Todos os direitos reservados.</p>
+        <div class="d-flex align-items-center">
+            <span class="px-2">Feito por:</span>
+            <div class="">
+                <a href="https://github.com/Rodhenrique/IdWall-Telas/" target="_blank">Erick</a>
+                <a href="https://github.com/Rodhenrique/IdWall-Telas/" target="_blank">Lucas</a>
+                <a href="https://github.com/Rodhenrique/IdWall-Telas/" target="_blank">Josué</a>
+                <a href="https://github.com/Rodhenrique/IdWall-Telas/" target="_blank">Henrique</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Modal  Novo Relatório -->
     <div class="modal fade" id="newReport" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
@@ -172,8 +362,11 @@
                 <!-- modal-header -->
                 <div class="modal-header">
                     <img src="../content/images/new_report.svg" alt="">
-                    <b><h5 class="modal-title ms-2" id="modal-title">Informe os dados</h5></b>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <b>
+                        <h5 class="modal-title ms-2" id="modal-title">Informe os dados</h5>
+                    </b>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
 
                 <!-- Subtitulo -->
@@ -185,44 +378,55 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row">
-                            <!-- nome completo -->                        
+                            <!-- nome completo -->
                             <div class="col-md-6">
-                                <label for="modal-name" class="form-label"></label>
-                                <input type="text" class="form-control rounded" id="modal-name" placeholder="Nome completo *">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded" id="modal-name"
+                                        placeholder="Nome completo *">
+                                    <label for="modal-name">Nome completo *</label>
+                                </div>
                             </div>
                             <!-- cpf/cnpj -->
                             <div class="col-md-6">
-                                <label for="modal-cpfcnpj" class="form-label"></label>
-                                <input type="text" class="form-control rounded" id="modal-cpfcnpj" placeholder="CPF/CNPJ *">                        
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded" id="modal-cpfcnpj"
+                                        placeholder="CPF/CNPJ *">
+                                    <label for="modal-cpfcnpj">CPF/CNPJ *</label>
+                                </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- Data de Nascimento-->
                             <div class="col-md-6">
-                                <label for="modal-date" class="form-label"></label>
-                                <input type="text" class="form-control textbox-n rounded" onfocus="(this.type='date')" id="modal-date" placeholder="Data de Nascimento">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control textbox-n rounded"
+                                        onfocus="(this.type='date')" id="modal-date" placeholder="Data de Nascimento">
+                                    <label for="modal-date" class="form-label">Data de Nascimento</label>
+                                </div>
                             </div>
 
-                            <!-- Email -->
-                            <div class="col-md-6">
-                                <label for="modal-email" class="form-label"></label>
-                                <input type="email" class="form-control rounded" id="modal-email" placeholder="Email">
+                            <!-- Tipo de relatorio -->
+                            <div class="col-md-6 mb-3">
+                                <select class="report-type filter rounded" id="modal-reporttype">
+                                    <option selected disabled>Tipo de Relatório</option>
+                                    <option>Relatório padrão PF</option>
+                                    <option>Antecedentes criminais</option>
+                                    <option>Registro de Óbito Receita Federal</option>
+                                    <option>Processos na Justiça Federal</option>
+                                    <option>Nome na Receita Federal</option>
+                                </select>
                             </div>
                         </div>
 
                         <div class="row">
-                            <!-- dropdown tipo relatorio -->
-                            <div class="form-group col-md-6">
-                                <label for="modal-reporttype" class="form-label"></label>
-                                    <select list="report_types" class="form-control rounded" id="modal-reporttype" placeholder="Tipo de Relatório *">
-                                        <option selected>Tipo de Relatório</option>                                
-                                        <option>Relatório padrão PF</option>
-                                        <option>Antecedentes criminais</option>
-                                        <option>Registro de Óbito Receita Federal</option>
-                                        <option>Processos na Justiça Federal</option>
-                                        <option>Nome na Receita Federal</option>
-                                    </select>                    
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded" id="modal-email"
+                                        placeholder="E-mail">
+                                    <label for="modal-email" class="form-label">E-mail</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -231,10 +435,10 @@
                 <!-- modal-footer -->
                 <div class="modal-footer">
                     <div class="container-fluid">
-                        <div class="col-md-12 text-center">                        
-                            <button class="btn btn-large btn-primary d-inline-flex align-items-center">
-                                <img src="../content/images/report_create.svg" alt="">
-                                <div class='ms-4'>Solicitar relatório</div>
+                        <div class="col-md-12 text-center">
+                            <button class="btn btn-large d-inline-flex align-items-center">
+                                <img class="mb-1" src="../content/images/report_create.svg" alt="">
+                                <div class='ms-2 ms-md-4'>Solicitar relatório</div>
                             </button>
                         </div>
                     </div>
@@ -243,20 +447,21 @@
         </div>
     </div>
 
-    
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <!-- Jquerry -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Nice Select -->
     <script src="../content/scripts/nice-select-1.1.0/js/jquery.js"></script>
     <script src="../content/scripts/nice-select-1.1.0/js/jquery.nice-select.js"></script>
-    
+
     <script src="../content/scripts/main.js"></script>
-    </body>
+</body>
+
 </html>

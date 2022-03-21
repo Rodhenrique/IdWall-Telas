@@ -23,21 +23,28 @@
 
 <body>
     <!-- Nav section -->
-    <nav class="navbar navbar-expand fixed-top" id="nav">
+    <nav class="navbar navbar-expand-lg fixed-top" id="nav">
         <div class="container">
             <a href="#" class="navbar-brand">
                 <img src="../content/images/idwall-logo.svg" alt="IdWall">
             </a>
-            <ul class="navbar-nav">
-                <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="../Files/pipeline.html">Relatórios</a></li>
-                <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="../Files/monitor.html">Monitor</a></li>
-                <li class="nav-item mx-1 p-2 selected"><a class="nav-link p-3" href="../Files/usuarios.html">Usuários</a></li>
-            </ul>
-
-            <button class="btn btn-large d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#newReport">
+            
+            <button class="new-report-btn btn btn-large d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#newReport">
                 <img src="../content/images/documents-icon.svg" alt="">
-                <div class="ms-5">Novo Relatório</div>
+                <div class="ms-4 ms-lg-5">Novo Relatório</div>
             </button>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="../content/images/menu-toggler.svg" alt=""></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="../Files/pipeline.html">Relatórios</a></li>
+                    <li class="nav-item mx-1 p-2"><a class="nav-link p-3" href="../Files/monitor.html">Monitor</a></li>
+                    <li class="nav-item mx-1 p-2 selected"><a class="nav-link p-3" href="../Files/usuarios.html">Usuários</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -52,7 +59,7 @@
                 </select>
             </div>
             <div class="search-input">
-                <input class="p-2" type="text" class="form-control" id="users-search" placeholder="ID do usuário">
+                <input class="p-3" type="text" class="form-control" id="users-search" placeholder="ID do usuário">
             </div>
         </div>
 
@@ -65,19 +72,19 @@
                     </a>
                     <h3>Todos os usuários</h3>
                     <div class="table-options d-flex align-items-center">
-                        <div class="table-sort d-flex align-items-center px-2">
+                        <div class="table-sort d-flex align-items-center px-lg-2">
                             <img class="p-2" src="../content/images/sort-icon.svg" alt="">
                             <select class="filter table-option" id="users-table-sort">
-                                <option>Ordenar</option>
+                                <option selected disabled>Ordenar</option>
                                 <option value="1">A-Z</option>
                                 <option value="2">Por ID</option>
                                 <option value="3">Protocolos</option>
                             </select>
                         </div>
-                        <div class="table-filter d-flex align-items-center px-2">
+                        <div class="table-filter d-flex align-items-center px-lg-2">
                             <img class="p-2" src="../content/images/filter-icon.svg" alt="">
                             <select class="filter table-option" id="users-table-filter">
-                                <option>Filtrar</option>
+                                <option selected disabled>Filtrar</option>
                                 <option value="1">Todos</option>
                                 <option value="2">Desativados</option>
                                 <option value="3">Com Acesso</option>
@@ -285,14 +292,6 @@
                             <td>Sim</td>
                             <td><a class="btn btn-small" href="#">Logar</a></td>
                         </tr>
-                        <tr>
-                            <td colspan="8">
-                                <button class="btn spinner_color" type="button" disabled>
-                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                    <span class="sr-only">Carregando...</span>
-                                </button>
-                            </td>                        
-                        </tr>    
                     </tbody>
                 </table>
             </div>
@@ -336,42 +335,49 @@
                         <div class="row">
                             <!-- nome completo -->                        
                             <div class="col-md-6">
-                                <label for="modal-name" class="form-label"></label>
-                                <input type="text" class="form-control rounded" id="modal-name" placeholder="Nome completo *">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded" id="modal-name" placeholder="Nome completo *">
+                                    <label for="modal-name">Nome completo *</label>
+                                </div>
                             </div>
                             <!-- cpf/cnpj -->
                             <div class="col-md-6">
-                                <label for="modal-cpfcnpj" class="form-label"></label>
-                                <input type="text" class="form-control rounded" id="modal-cpfcnpj" placeholder="CPF/CNPJ *">                        
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded" id="modal-cpfcnpj" placeholder="CPF/CNPJ *">   
+                                    <label for="modal-cpfcnpj">CPF/CNPJ *</label>                     
+                                </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- Data de Nascimento-->
                             <div class="col-md-6">
-                                <label for="modal-date" class="form-label"></label>
-                                <input type="text" class="form-control textbox-n rounded" onfocus="(this.type='date')" id="modal-date" placeholder="Data de Nascimento">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control textbox-n rounded" onfocus="(this.type='date')" id="modal-date" placeholder="Data de Nascimento">
+                                    <label for="modal-date" class="form-label">Data de Nascimento</label>
+                                </div>
                             </div>
 
-                            <!-- Email -->
-                            <div class="col-md-6">
-                                <label for="modal-email" class="form-label"></label>
-                                <input type="email" class="form-control rounded" id="modal-email" placeholder="Email">
+                            <!-- Tipo de relatorio -->
+                            <div class="col-md-6 mb-3">
+                                <select class="report-type filter rounded" id="modal-reporttype">
+                                    <option selected disabled>Tipo de Relatório</option>                                
+                                    <option>Relatório padrão PF</option>
+                                    <option>Antecedentes criminais</option>
+                                    <option>Registro de Óbito Receita Federal</option>
+                                    <option>Processos na Justiça Federal</option>
+                                    <option>Nome na Receita Federal</option>
+                                </select>          
                             </div>
                         </div>
 
                         <div class="row">
-                            <!-- dropdown tipo relatorio -->
-                            <div class="form-group col-md-6">
-                                <label for="modal-reporttype" class="form-label"></label>
-                                    <select list="report_types" class="form-control rounded" id="modal-reporttype" placeholder="Tipo de Relatório *">
-                                        <option selected>Tipo de Relatório</option>                                
-                                        <option>Relatório padrão PF</option>
-                                        <option>Antecedentes criminais</option>
-                                        <option>Registro de Óbito Receita Federal</option>
-                                        <option>Processos na Justiça Federal</option>
-                                        <option>Nome na Receita Federal</option>
-                                    </select>                    
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded" id="modal-email" placeholder="E-mail">
+                                    <label for="modal-email" class="form-label">E-mail</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -381,9 +387,9 @@
                 <div class="modal-footer">
                     <div class="container-fluid">
                         <div class="col-md-12 text-center">                        
-                            <button class="btn btn-large btn-primary d-inline-flex align-items-center">
-                                <img src="../content/images/report_create.svg" alt="">
-                                <div class='ms-4'>Solicitar relatório</div>
+                            <button class="btn btn-large d-inline-flex align-items-center">
+                                <img class="mb-1" src="../content/images/report_create.svg" alt="">
+                                <div class='ms-2 ms-md-4'>Solicitar relatório</div>
                             </button>
                         </div>
                     </div>
@@ -405,25 +411,25 @@
                 <div class="modal-body">
                     <!-- CPF - CNPJ input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control rounded" id="userCPF" type="text"/>
-                        <label for="cpf">CPF/CNPJ</label>
+                        <input class="form-control rounded" id="userCPF" type="text" placeholder="CPF/CNPJ"/>
+                        <label for="userCPF">CPF/CNPJ</label>
                     </div>
                     
                     <!-- Name input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control rounded" id="userName" type="text"/>
-                        <label for="name">Nome Completo</label>
+                        <input class="form-control rounded" id="userName" type="text" placeholder="Nome Completo"/>
+                        <label for="userName">Nome Completo</label>
                     </div>
                      
                     <!-- Email input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control rounded" id="userEmail" type="text"/>
-                        <label for="email">Email</label>
+                        <input class="form-control rounded" id="userEmail" type="text" placeholder="E-mail"/>
+                        <label for="userEmail">E-mail</label>
                     </div>
                     <!-- Birth Date input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control rounded" onfocus="(this.type='date')" id="modal-date" type="text">
-                        <label for="modal-date">Data de Nascimento</label>
+                        <input class="form-control rounded" onfocus="(this.type='date')" id="userModaDate" type="text" placeholder="Data de Nascimento">
+                        <label for="userModalDate">Data de Nascimento</label>
                     </div>
 
                 
@@ -433,7 +439,7 @@
                         <div class="col-md-12 text-center">                        
                             <button class="btn btn-large btn-primary d-inline-flex align-items-center">
                                 <img src="../content/images/add-user-icon.svg" alt="">
-                                <div class='ms-4'>Adicionar Usuário</div>
+                                <div class='ms-2 ms-lg-4'>Adicionar Usuário</div>
                             </button>
                         </div>
                     </div>
@@ -442,7 +448,6 @@
         </div>
     </div>
     
-
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
