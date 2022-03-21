@@ -10,13 +10,17 @@
     border-radius: 10px 0 0 10px;
 }
 
-.form-select{
-    background-color: transparent;
-    box-shadow: none!important;
-    border: none;
+.search-options {
+    border: none!important;
+    background-color: transparent!important;
+    font-size: 16px;
     color: white;
-    font-weight: 600;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    width: 200px;
+    padding: 0;
+}
+
+.search-options .option {
+    color: black!important;
 }
 
 .search-options::after {
