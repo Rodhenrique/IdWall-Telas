@@ -27,6 +27,7 @@
 .search-options::after {
     border-bottom: 2px solid white;
     border-right: 2px solid white;
+    right: -28px;
 }
 
 input[type="text"] {

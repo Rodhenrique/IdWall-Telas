@@ -60,6 +60,10 @@ h1, h2, h3 {
     padding-bottom: 0;
 }
 
+.navbar-nav {
+    margin-left: 8rem;
+}
+
 .navbar-brand img {
     width: 100px;
 }

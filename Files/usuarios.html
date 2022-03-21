@@ -45,7 +45,7 @@
         <!-- Table Search Section -->
         <div class="container d-flex justify-content-center">
             <div class="search-filter d-flex align-items-center">
-                <select class="search-options px-4" id="users-search-filter">
+                <select class="filter search-options px-4" id="users-search-filter">
                     <option value="id">Buscar por ID</option>
                     <option value="email">Buscar por email</option>
                     <option value="nome">Buscar por cliente</option>
@@ -67,7 +67,7 @@
                     <div class="table-options d-flex align-items-center">
                         <div class="table-sort d-flex align-items-center px-2">
                             <img class="p-2" src="../content/images/sort-icon.svg" alt="">
-                            <select class="table-option" id="users-table-sort">
+                            <select class="filter table-option" id="users-table-sort">
                                 <option>Ordenar</option>
                                 <option value="1">A-Z</option>
                                 <option value="2">Por ID</option>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="table-filter d-flex align-items-center px-2">
                             <img class="p-2" src="../content/images/filter-icon.svg" alt="">
-                            <select class="table-option" id="users-table-filter">
+                            <select class="filter table-option" id="users-table-filter">
                                 <option>Filtrar</option>
                                 <option value="1">Todos</option>
                                 <option value="2">Desativados</option>
@@ -91,7 +91,7 @@
         <!--Table Section -->
         <div class="container pt-3">
             <div class="users-table">
-                <table class="table" id="usersTable">
+                <table class="table table-responsive text-center" id="usersTable">
                     <thead class="table-head">
                         <tr>
                             <th>ID</th>
@@ -285,6 +285,14 @@
                             <td>Sim</td>
                             <td><a class="btn btn-small" href="#">Logar</a></td>
                         </tr>
+                        <tr>
+                            <td colspan="8">
+                                <button class="btn spinner_color" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    <span class="sr-only">Carregando...</span>
+                                </button>
+                            </td>                        
+                        </tr>    
                     </tbody>
                 </table>
             </div>
