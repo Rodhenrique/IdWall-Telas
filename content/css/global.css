@@ -166,6 +166,6 @@ a {
 
     .nav-item.selected {
         font-weight: 700;
-        box-shadow: 0 1.2px var(--purple);
+        border-bottom: 1.2px solid var(--purple);
     }
 }
