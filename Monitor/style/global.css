@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #5500FF;
+    --purple: #4100CF;
+    --lighter-purple:  #C8C2FF;
+    --grey: #595959;
+    --light-grey: #BFBFBF;
+    --lighter-grey: #E8E8E8;
+    --red: #CF1322;
+    --main-background: #FAFAFA;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--main-background);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Buttons */
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    color: white;
+    background-color: var(--purple);
+}
+
+.btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-large {
+    width: 270px;
+    height: 48px;
+}
+
+.btn-small {
+    font-size: 12px;
+    height: 28px;
+    box-shadow: none!important;
+}
+
+/* Nav */
+
+.navbar {
+    background-color: var(--main-background);
+    box-shadow: 0 1.2px rgba(0, 0, 0, 0.2);
+    padding-bottom: 0;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.nav-item a {
+    color: var(--grey)!important;
+}
+
+.nav-item a:hover {
+    color: var(--primary-color)!important;
+}
+
+.nav-item.selected {
+    font-weight: 700;
+    box-shadow: 0 1.2px var(--purple);
+}
